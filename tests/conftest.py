@@ -1,11 +1,7 @@
-from pathlib import Path
 import pytest
 import requests
 from page.base_page import BasePageClass
 from configs.config import base_url
-
-
-path_to_expect_data = Path(r"C:\PythonProjects2\TagesTests\configs\except_data.json")
 
 
 def pytest_addoption(parser):
