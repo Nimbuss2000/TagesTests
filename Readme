@@ -1,0 +1,13 @@
+Тесты главной страницы Tages.ru
+
+
+Примеры запуска теста:
+1) pytest -v -m desktop --browser=chrome
+2) pytest -v -m desktop --browser=firefox
+3) pytest -v -m mobile    // работает только с chrome
+
+Для получения отчета о тестировании необходимо установить allure:
+  1) установить Scoop отсюда https://scoop.sh/
+  2) установить на компьютер allure командой scoop install allure
+  3) после выполнения тестов выполнить команды:
+    3.1) 
