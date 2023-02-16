@@ -1,0 +1,251 @@
+{
+  "links_tests": {
+    "static_header": {
+      "page": {"href": "", "selector": ".header__logo.nuxt-link-exact-active.nuxt-link-active"},
+      "about": {"href": "about", "selector": "a[aria-label='О компании']"},
+      "academy": {"href": "academy", "selector": "a[aria-label='Академия']"},
+      "events": {"href": "events", "selector": "a[aria-label='Мероприятия']"},
+      "blog": {"href": "blog/", "selector": "ul[class='nav-menu nav-menu_desktop'] a[aria-label='Блог']"},
+      "vacancies": {"href": "vacancies", "selector": "a[aria-label='Вакансии']"},
+      "contacts": {"href": "contacts", "selector": "a[aria-label='Контакты']"}
+    },
+    "static_header_mobile": {
+      "about": {"href": "about", "selector": "//ul[@class='nav-menu nav-menu_mobile']//a[@class='nav-menu__item-link link link_black'][contains(text(),'О компании')]"},
+      "academy": {"href": "academy", "selector": "//ul[@class='nav-menu nav-menu_mobile']//a[@class='nav-menu__item-link link link_black'][contains(text(),'Академия')]"},
+      "events": {"href": "events", "selector": "//ul[@class='nav-menu nav-menu_mobile']//a[@class='nav-menu__item-link link link_black'][contains(text(),'Мероприятия')]"},
+      "blog": {"href": "blog/", "selector": "//ul[@class='nav-menu nav-menu_mobile']//a[@aria-label='Блог'][contains(text(),'Блог')]"},
+      "vacancies": {"href": "vacancies", "selector": "//ul[@class='nav-menu nav-menu_mobile']//a[@class='nav-menu__item-link link link_black'][contains(text(),'Вакансии')]"},
+      "contacts": {"href": "contacts", "selector": "//ul[@class='nav-menu nav-menu_mobile']//a[@class='nav-menu__item-link link link_black'][contains(text(),'Контакты')]"}
+    },
+    "static": {
+      "policy": {"href": "policy", "selector": ".link.footer__item-policy-link"}
+    },
+    "forms": {
+      "request form": {"href": "#form", "selector": "a[aria-label='Форма запроса']"}
+    },
+    "partners": {
+      "rolf": {"href": "https://www.rolf.ru/", "selector": "a[title='Рольф']"},
+      "medsi": {"href": "https://medsi.ru/", "selector": "a[title='Медси']"},
+      "omniboard360": {"href": "https://navigator.sk.ru/orn/1123852", "selector": "a[title='omniboard360']"},
+      "ignos": {"href": "https://www.ingos.ru/", "selector": "a[title='Ингосстрах']"},
+      "mvideoeldorado": {"href": "https://www.mvideoeldorado.ru/", "selector": "a[title='М.ВидеоЭльдорадо']"},
+      "leroymerlin": {"href": "https://leroymerlin.ru/", "selector": "a[title='Леруа Мерлен']"},
+      "tn": {"href": "https://www.tn.ru/", "selector": "a[title='Технониколь']"}
+    },
+    "tel": {
+      "request": {"href": "tel:+74956402394", "selector": "a[aria-label='Телефон для запроса']"},
+      "company": {"href": "tel:+74956402394", "selector": "a[aria-label='Телефон компании']"},
+      "press": {"href": "tel:+79153646126", "selector": "a[aria-label='Телефон пресс-службы']"}
+    },
+    "mailto": {
+      "company": {"href": "mailto:jump@tages.ru", "selector": "a[aria-label='Почтовый адрес компании']"},
+      "press": {"href": "mailto:pr@tages.ru", "selector": "a[aria-label='Почтовый адрес пресс-службы']"},
+      "hr": {"href": "mailto:HR@tages.ru", "selector": "a[aria-label='Почтовый адрес HR отдела']"}
+    },
+    "telegram": {
+      "telegram": {"href": "https://t.me/tagesru", "selector": "a[aria-label='Tages Telegram']"}
+    },
+    "vk": {
+      "vk": {"href": "https://vk.com/tagesru", "selector": "a[aria-label='Tages VKontakte']"}
+    },
+    "youtube": {
+      "youtube": {"href": "https://www.youtube.com/channel/UCBK5-lZpfKeu_yjH30DpvSQ", "selector": "a[aria-label='YouTube']"}
+    }
+  },
+  "field_tests": {
+    "selector": {
+      "send": ".form__send-form-button.button",
+      "name": "input[placeholder='Имя*']",
+      "phone": "input[placeholder='Телефон*']",
+      "mail": "input[placeholder='Почта*']"
+    },
+    "name": {
+      "Виктор": true,
+      "Michail": true,
+      "иван": true,
+      "jhon": true,
+      "0123456789": false,
+      "123Анна": false,
+      "Анна123": false,
+      "!@\"#№$;%^:?&*()-_+={}~'.,": false,
+      "!@\"#№$;%^:?&*()-_+={}~'.,~Яна": false,
+      "    ": false,
+      " Анна ": false,
+      "": false,
+      "QwertyQwertyqwertyQwertyqwertyqwertyQwertyqwertyqwertyQwertyqwertyqwertyQwertyqwertyqwertyQwertyqwertyqwertyQwertyqwertyqwertyQwertyqwertyqwertyQwertyqwertyqwertyQwertyqwertyqwertyQwertyqwertyqwertyQwertyqwertyqwertyQwertyqwertyqwertyQwertyqwertyqwertyQwertyq": false
+    },
+    "phone": {
+      "9555788778": true,
+      "95557887789989": true,
+      "qwery9555788778qwerty": true,
+      "    9555788778    ": true,
+      "+9555788778+": true,
+      "9": false,
+      "qwerty": false,
+      "    ": false,
+      " ": false,
+      "!@\"#№$;%^:?&*()-_+={}~'.,": false
+    },
+    "mail": {
+      "simple@mail.com": true,
+      "dot.address@mail.com": true,
+      "doubledot1@mail.co.uk": true,
+      "double.dot.2@mail.com": true,
+      "c@mail.com": true,
+      "down_line@mail.com": true,
+      "text-line@mail.com": true,
+      "slash/mail@mail.com": true,
+      "UpperMail@mail.com": true,
+      "spesh!#$^%*/Chars@mail.com": true,
+      "line-@mail.com": true,
+      "no.mailsymbolmail.com": false,
+      "nodomen@mail": false,
+      "double@mailsymbol@mail.com": false,
+      "space mail@mail.com": false,
+      "dubledots..mail@mail.com": false,
+      ".firsdotsymbol@mail.com": false
+    }
+  },
+  "form_response": {
+    "selector": {
+      "send": ".form__send-form-button.button",
+      "success": ".form__success-badge",
+      "refresh": ".form__success-badge-button",
+      "name": "input[placeholder='Имя*']",
+      "phone": "input[placeholder='Телефон*']",
+      "mail": "input[placeholder='Почта*']",
+      "company": "input[placeholder='Компания']",
+      "comment": "textarea[placeholder='Комментарий']"
+    },
+    "test_data": {
+      "test_data_0": {
+        "name": "Игорь",
+        "phone": "9984522145",
+        "company": "Apple",
+        "mail": "test@mail.com",
+        "comment": "",
+        "valid": true
+      },
+      "test_data_1": {
+        "name": "Игорь",
+        "phone": "9984522145",
+        "company": "",
+        "mail": "test@mail.com",
+        "comment": "",
+        "valid": true
+      },
+      "test_data_2": {
+        "name": "Тимур",
+        "phone": "9984522145",
+        "company": "",
+        "mail": "test@mail.com",
+        "comment": "Тестовый комментарий",
+        "valid": true
+      },
+      "test_data_3": {
+        "name": "Виктор",
+        "phone": "",
+        "company": "",
+        "mail": "",
+        "comment": "",
+        "valid": false
+      },
+      "test_data_4": {
+        "name": "Jhon",
+        "phone": "9998665454",
+        "company": "HP",
+        "mail": "test@test.com",
+        "comment": "Test comment",
+        "valid": true
+      },
+      "test_data_5": {
+        "name": "12345",
+        "phone": "888",
+        "company": "",
+        "mail": "abc@mail.com",
+        "comment": "",
+        "valid": false
+      },
+      "test_data_6": {
+        "name": "^&#@()_",
+        "phone": "",
+        "company": "Cola",
+        "mail": "abc.def@mail.cc",
+        "comment": "Test comment",
+        "valid": false
+      },
+      "test_data_7": {
+        "name": "      ",
+        "phone": "9811588465",
+        "company": "",
+        "mail": "abc.def@mail",
+        "comment": "",
+        "valid": false
+      },
+      "test_data_8": {
+        "name": "_0234_",
+        "phone": "9995465456",
+        "company": "Java",
+        "mail": "",
+        "comment": "!@#^*&#$%)",
+        "valid": false
+      },
+      "test_data_9": {
+        "name": "",
+        "phone": "",
+        "company": "",
+        "mail": "",
+        "comment": "",
+        "valid": false
+      },
+      "test_data_10": {
+        "name": "",
+        "phone": "9655468789",
+        "company": "",
+        "mail": "test.example@mail.com",
+        "comment": "",
+        "valid": false
+      },
+      "test_data_11": {
+        "name": "",
+        "phone": "321",
+        "company": "Mojo",
+        "mail": "test.test.com",
+        "comment": "Test comment",
+        "valid": false
+      },
+      "test_data_12": {
+        "name": "Анна",
+        "phone": "9998755456",
+        "company": "",
+        "mail": "test@mail@test.com",
+        "comment": "",
+        "valid": false
+      },
+      "test_data_13": {
+        "name": "Инга",
+        "phone": "9654562132",
+        "company": "Crop",
+        "mail": "",
+        "comment": "Tests comment",
+        "valid": false
+      },
+      "test_data_14": {
+        "name": "Alice",
+        "phone": "213",
+        "company": "",
+        "mail": "test@test.com",
+        "comment": "",
+        "valid": false
+      },
+      "test_data_15": {
+        "name": "Bob",
+        "phone": "",
+        "company": "Xiaomi",
+        "mail": "test@test.com",
+        "comment": "Test comment",
+        "valid": false
+      }
+    }
+  }
+}
