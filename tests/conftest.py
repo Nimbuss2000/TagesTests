@@ -6,7 +6,6 @@ from configs.config import base_url
 
 def pytest_addoption(parser):
     parser.addoption("--browser", action="store", default="chrome", help="chose browser: chrome/firefox")
-    parser.addoption("--device", action="store", default="pc", help="chose device: pc/mobile")
 
 
 @pytest.fixture
@@ -26,11 +25,6 @@ def work_driver(request, pytestconfig):
         device = 'mobile'
     else:
         device = 'desktop'
-    #
-    # markers = request.node.own_markers
-    # for marker in markers:
-    #     if marker == 'mobile':
-    #         print(marker.name)
 
     base_page = BasePageClass(url, browser, device)
     yield base_page

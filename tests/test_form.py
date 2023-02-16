@@ -90,6 +90,52 @@ class TestForm:
         else:
             assert "form__input_error" in classes
 
+    @allure.title("Company field validation")
+    @pytest.mark.desktop
+    @pytest.mark.mobile
+    @pytest.mark.parametrize("value, expect", test_data["company"].items())
+    def test_company_validation(self, work_driver, value, expect):
+        """
+        Test
+        1) Element is visible
+        2) Fill valid text
+        """
+
+        work_driver.to_main_page()
+        selector = self.test_data['selector']['company']
+
+        element = work_driver.element_is_visible(selector)
+        assert not isinstance(element, Exception), "Field is not visible"
+
+        element.send_keys(value)
+
+        text_from_field = element.get_attribute('value')
+        text_compare = text_from_field == value
+        assert text_compare == expect
+
+    @allure.title("Comment field validation")
+    @pytest.mark.desktop
+    @pytest.mark.mobile
+    @pytest.mark.parametrize("value, expect", test_data["comment"].items())
+    def test_comment_validation(self, work_driver, value, expect):
+        """
+        Test
+        1) Element is visible
+        2) Fill valid text
+        """
+
+        work_driver.to_main_page()
+        selector = self.test_data['selector']['comment']
+
+        element = work_driver.element_is_visible(selector)
+        assert not isinstance(element, Exception), "Field is not visible"
+
+        element.send_keys(value)
+
+        text_from_field = element.get_attribute('value')
+        text_compare = text_from_field == value
+        assert text_compare == expect
+
 
 @allure.epic("Form")
 @allure.story("Form response")

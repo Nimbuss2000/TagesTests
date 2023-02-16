@@ -57,7 +57,9 @@
       "send": ".form__send-form-button.button",
       "name": "input[placeholder='Имя*']",
       "phone": "input[placeholder='Телефон*']",
-      "mail": "input[placeholder='Почта*']"
+      "mail": "input[placeholder='Почта*']",
+      "company": "input[placeholder='Компания']",
+      "comment": "textarea[placeholder='Комментарий']"
     },
     "name": {
       "Виктор": true,
@@ -104,6 +106,19 @@
       "space mail@mail.com": false,
       "dubledots..mail@mail.com": false,
       ".firsdotsymbol@mail.com": false
+    },
+    "company": {
+      "SimpleCompany": true,
+      "123Numbers123InName123": true,
+      "Si!m@b#o$l%s^I&n()Name": true,
+      "": true,
+      "Space in name": true,
+      "      ": true
+    },
+    "comment": {
+      "Simple comment": true,
+      "Comment with numbers 12345670 -1 -2 -3": true,
+      "Comment !@#$%^&*()_+|}{\/ with symbols": true
     }
   },
   "form_response": {

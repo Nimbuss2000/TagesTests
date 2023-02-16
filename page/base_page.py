@@ -8,6 +8,8 @@ from selenium.webdriver.firefox.service import Service as FService
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
 
+from configs.config import telephone_device
+
 
 class BasePageClass:
 
@@ -29,7 +31,7 @@ class BasePageClass:
             chrome_options.add_experimental_option("prefs", prefs)
 
             if device == "mobile":
-                device_opt = {"deviceName": "Pixel 5"}
+                device_opt = {"deviceName": telephone_device}
                 chrome_options.add_experimental_option("mobileEmulation", device_opt)
 
             self._driver = webdriver.Chrome(service=CService(ChromeDriverManager().install()), options=chrome_options)
